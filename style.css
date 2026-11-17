@@ -39,6 +39,8 @@ html,body{touch-action:pan-x pan-y}.verse-list,.plan-row{touch-action:pan-y}.dai
 
 .ios-share-icon{display:inline-flex;vertical-align:-3px;color:#b5dfd2}.ios-share-icon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 /* Keep reading content and fixed controls clear of screen edges. */
-#app{padding-left:calc(3px + env(safe-area-inset-left, 0px));padding-right:calc(3px + env(safe-area-inset-right, 0px))}
-.bottom-bar{left:calc(3px + env(safe-area-inset-left, 0px));right:calc(3px + env(safe-area-inset-right, 0px))}
+.reading,.diary-screen,.utility-page,.app-settings{padding-left:calc(3px + env(safe-area-inset-left, 0px));padding-right:calc(3px + env(safe-area-inset-right, 0px))}
+.home-nav{padding-left:max(9%,calc(3px + env(safe-area-inset-left, 0px)));padding-right:max(9%,calc(3px + env(safe-area-inset-right, 0px)))}
+.home-actions{right:max(3%,calc(3px + env(safe-area-inset-right, 0px)))}
+.bottom-bar{left:0;right:0;padding-left:calc(3px + env(safe-area-inset-left, 0px));padding-right:calc(3px + env(safe-area-inset-right, 0px))}
 dialog.modern-sheet,dialog.selector-sheet{left:calc(3px + env(safe-area-inset-left, 0px));right:calc(3px + env(safe-area-inset-right, 0px));width:auto;max-width:540px}
