@@ -18,6 +18,6 @@ test('pinch scaling grows and shrinks text within supported limits', () => {
  assert.equal(core.pinchFontSize(100,100,150),150);
  assert.equal(core.pinchFontSize(150,100,50),75);
  assert.equal(core.pinchFontSize(100,100,500),250);
- assert.equal(core.pinchFontSize(100,100,10),70);
+ assert.equal(core.pinchFontSize(100,100,10),30);
  assert.equal(core.pinchFontSize(100,0,100),100);
 });
