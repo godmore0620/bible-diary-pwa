@@ -14,3 +14,10 @@ test('reading plan starts with January 1 for a custom start date', () => {
  assert.deepEqual(core.planDate('2026-11-17','2026-11-17'), {month:1,day:1,progress:1});
  assert.deepEqual(core.planDate('2026-11-19','2026-11-17'), {month:1,day:3,progress:3});
 });
+test('pinch scaling grows and shrinks text within supported limits', () => {
+ assert.equal(core.pinchFontSize(100,100,150),150);
+ assert.equal(core.pinchFontSize(150,100,50),75);
+ assert.equal(core.pinchFontSize(100,100,500),250);
+ assert.equal(core.pinchFontSize(100,100,10),70);
+ assert.equal(core.pinchFontSize(100,0,100),100);
+});
