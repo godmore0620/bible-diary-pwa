@@ -38,3 +38,7 @@ html,body{touch-action:pan-x pan-y}.verse-list,.plan-row{touch-action:pan-y}.dai
 .app-settings-header h1{margin:0}.ios-install-guide{margin:2px 0 16px;padding:14px;border:1px solid #3c5551;border-radius:11px;background:#1b3431;color:#deeee8;font-size:14px;line-height:1.65}.ios-install-guide strong{color:#a6dacb;font-size:14px}.ios-install-guide ol{margin:8px 0;padding-left:20px}.ios-install-guide li+li{margin-top:6px}.settings-card .ios-install-guide p{margin:10px 0 0;color:#a8bcb6;font-size:12px}
 
 .ios-share-icon{display:inline-flex;vertical-align:-3px;color:#b5dfd2}.ios-share-icon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+/* Keep reading content and fixed controls clear of screen edges. */
+#app{padding-left:calc(3px + env(safe-area-inset-left, 0px));padding-right:calc(3px + env(safe-area-inset-right, 0px))}
+.bottom-bar{left:calc(3px + env(safe-area-inset-left, 0px));right:calc(3px + env(safe-area-inset-right, 0px))}
+dialog.modern-sheet,dialog.selector-sheet{left:calc(3px + env(safe-area-inset-left, 0px));right:calc(3px + env(safe-area-inset-right, 0px));width:auto;max-width:540px}
