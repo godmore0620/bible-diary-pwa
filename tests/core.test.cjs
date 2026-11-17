@@ -21,3 +21,10 @@ test('pinch scaling grows and shrinks text within supported limits', () => {
  assert.equal(core.pinchFontSize(100,100,10),30);
  assert.equal(core.pinchFontSize(100,0,100),100);
 });
+test('scrolling only continues when content has room in gesture direction', () => {
+ assert.equal(core.canScrollGesture(0,1000,400,-30),true);
+ assert.equal(core.canScrollGesture(0,1000,400,30),false);
+ assert.equal(core.canScrollGesture(600,1000,400,-30),false);
+ assert.equal(core.canScrollGesture(600,1000,400,30),true);
+ assert.equal(core.canScrollGesture(0,300,400,-30),false);
+});
