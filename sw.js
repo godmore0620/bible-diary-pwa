@@ -1,4 +1,4 @@
-const CACHE='bible-pwa-v7';
+const CACHE='bible-pwa-v8';
 const ASSETS=['./','index.html','riverbackground.png','style.css','core.js','app.js','manifest.webmanifest','icons/icon-192.png','icons/icon-512.png','data/zh.json','data/en.json','data/ja.json','data/schedule.json','data/goldverse.json'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS.map(url=>new Request(url,{cache:'reload'})))).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('bible-pwa-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
