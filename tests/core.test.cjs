@@ -14,3 +14,8 @@ test('reading plan starts with January 1 for a custom start date', () => {
  assert.deepEqual(core.planDate('2026-11-17','2026-11-17'), {month:1,day:1,progress:1});
  assert.deepEqual(core.planDate('2026-11-19','2026-11-17'), {month:1,day:3,progress:3});
 });
+test('book selection filters by testament and name', () => {
+ const books = [{name:'創世紀',testament:0},{name:'出埃及記',testament:0},{name:'馬太福音',testament:1}];
+ assert.deepEqual(core.filterBooks(books, 0, '創'), [{book:books[0],index:0}]);
+ assert.deepEqual(core.filterBooks(books, 1, ''), [{book:books[2],index:2}]);
+});
