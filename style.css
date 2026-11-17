@@ -31,3 +31,6 @@ dialog.selector-sheet::backdrop{background:#0003}dialog.selector-sheet #dialogCo
 .utility-header{align-items:center;padding:calc(12px + env(safe-area-inset-top)) 18px 12px;gap:13px}.utility-header h1{font-size:20px}
 .verse-popup-title{font-size:14px}.verse-popup button{min-height:50px;font-size:clamp(18px,calc(18px * var(--text-scale)),24px)}
 .verse-list,.plan-row .verse{touch-action:pan-y}
+
+/* Keep the app frame fixed while the reading text scales independently. */
+html,body{touch-action:pan-x pan-y}.verse-list,.plan-row{touch-action:pan-y}.daily-verse{font-size:clamp(18px,5vw,25px)}.book-column button,.chapter-column button{font-size:20px}.settings-panel{font-size:20px}
